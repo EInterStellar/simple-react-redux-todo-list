@@ -1,0 +1,110 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #46b5d1;
+	border: 0.7px solid #313131;
+	border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: 0 0 5px #b9b9b9 inset;
+}
+
+// Styles
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 14px;
+	background: white;
+	font-family: "Andika New Basic", sans-serif;
+}
+
+.resetTextArea {
+	background: none;
+	overflow: hidden;
+	resize: none;
+	outline: 0;
+	overflow-wrap: break-word;
+}
+
+.mainContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-height: 100vh;
+	width: 100%;
+	overflow-x: scroll;
+	padding: 10px;
+	background-color: #ffffff;
+	background: linear-gradient(45deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 212, 255, 0.9) 100%);
+	background-size: cover;
+	background-attachment: fixed;
+
+	.todoContainer {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.addTodoList {
+		font-size: 15px;
+		max-width: 90%;
+		background: #009af3;
+		border-radius: 10px;
+		position: relative;
+		margin-right: 10px;
+
+		textarea {
+			width: 320px;
+			display: block;
+			height: 57px;
+			background-color: transparent;
+			font-size: 15px;
+			color: #ffffff;
+			padding: 20px;
+			padding-right: 110px;
+
+			&::placeholder {
+				color: #f0f0f0;
+			}
+		}
+
+		button {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 10px;
+			background-color: #153ed3;
+			color: #ffffff;
+			border-radius: 5px;
+			width: 80px;
+			text-align: center;
+			cursor: pointer;
+			transition: 0.2s;
+		}
+	}
+
+	.changeBg {
+		background: #e00000;
+		color: white;
+		cursor: pointer;
+		font-size: 16px;
+		padding: 10px 25px;
+		border-radius: 10px;
+		margin-left: auto;
+		min-width: 210px;
+	}
+}
