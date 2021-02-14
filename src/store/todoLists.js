@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import config from "../config/all";
 import log from "loglevel";
+import { v4 as uuidv4 } from "uuid";
 
 // Creating Reducer And Actions
 const slice = createSlice({
@@ -12,6 +13,7 @@ const slice = createSlice({
 		// todo Lists
 		todoListAdded: (todoLists, action) => {
 			todoLists.list.push({
+				id: uuidv4(),
 				name: action.payload.name,
 				createdAt: Date.now(),
 				modifiedAt: Date.now(),
@@ -29,6 +31,7 @@ const slice = createSlice({
 		// todo Cards
 		todoCardAdded: (todoLists, action) => {
 			todoLists.list[action.payload.todoListIndex].cards.push({
+				id: uuidv4(),
 				name: action.payload.name,
 				createdAt: Date.now(),
 				modifiedAt: Date.now(),

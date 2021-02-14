@@ -81,7 +81,7 @@ export default function TodoList({ todoList, index }) {
 
 				<section className="body" ref={todosBodyRef}>
 					{todoList.cards.map((todo, cardIndex) => {
-						return <TodoItem key={cardIndex} listIndex={index} cardIndex={cardIndex} todo={todo} />;
+						return <TodoItem key={todo.id} listIndex={index} cardIndex={cardIndex} todo={todo} />;
 					})}
 				</section>
 

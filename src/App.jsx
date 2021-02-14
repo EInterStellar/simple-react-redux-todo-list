@@ -36,7 +36,7 @@ export default function App() {
 			<section className="mainContainer" ref={mainContainerRef} style={mainContainerStyles}>
 				<section className="todoContainer" id="todocontainer">
 					{todoLists.list.map((todoList, index) => {
-						return <TodoList key={index} index={index} todoList={todoList} />;
+						return <TodoList key={todoList.id} index={index} todoList={todoList} />;
 					})}
 				</section>
 				<section className="addTodoList">
